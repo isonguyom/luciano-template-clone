@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="./images/homepage/icon-1.png" />
+  <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Olive Oil Production</title>
+</head>
+
+<body>
+  <header>
+    <button onclick="toTop()" id="goTop" title="Scroll to top"
+      class="shadow-sm py-2 px-3 py-md-3 px-md-4 border-0 c-bg1 position-fixed c-go-top">^</button>
+    <div class="c-btn-position position-fixed" id="panel">
+      <div class="c-fixedbtn c-bg1 shadow-sm py-2 px-3 py-md-3 px-md-4 mb-1">
+        <svg width="1em" height="1.2em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+        </svg>
+        <span class="c-fixedbtn-tooltip py-2 px-1 text-center text-white position-absolute invisible">Buy Theme</span>
+      </div>
+      <div class="c-fixedbtn c-bg1 shadow-sm py-2 px-3 py-md-3 px-md-4 mb-1">
+        <svg width="1em" height="1.2em" viewBox="0 0 16 16" class="bi bi-images" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M12.002 4h-10a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-10-1a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-10z" />
+          <path
+            d="M10.648 8.646a.5.5 0 0 1 .577-.093l1.777 1.947V14h-12v-1l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71z" />
+          <path fill-rule="evenodd"
+            d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM4 2h10a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1v1a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2h1a1 1 0 0 1 1-1z" />
+        </svg>
+        <span class="c-fixedbtn-tooltip py-2 px-1 text-center text-white position-absolute invisible"
+          width="150px">Related Themes</span>
+      </div>
+      <div class="c-fixedbtn c-bg1 shadow-sm py-2 px-3 py-md-3 px-md-4" id="hidePanel">
+        <svg width="1em" height="1.2em" viewBox="0 0 16 16" class="bi bi-window" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M14 2H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z" />
+          <path fill-rule="evenodd" d="M15 6H1V5h14v1z" />
+          <path
+            d="M3 3.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+        </svg>
+        <span class="c-fixedbtn-tooltip py-2 px-1 text-center text-white position-absolute invisible">Hide Panel</span>
+      </div>
+    </div>
+    <div id="mySearch" class="c-search c-color4 w-100 h-100 position-fixed">
+      <div class="c-search-content position-relative m-auto text-center w-100">
+        <form action="action_page.php">
+          <button type="submit" class="border-0 bg-transparent"><i class="fa fa-search c-color4"></i></button>
+          <input id="textField" type="text" placeholder="Keyword" name="search"
+            class="pb-3 pl-5 border-bottom c-border3 bg-transparent w-50 c-color4">
+          <span class="c-search-closebtn c-color4 ml-n3" onclick="closeSearch()" title="Close Search">x</span>
+        </form>
+      </div>
+    </div>
+    <div class="fixed-top mb-0 position-fixed c-mainnav">
+      <div class="collapse c-bg3 float-left w-100 c-collapse p-sm-5" id="navbarToggleExternalContent">
+        <a onclick="closeMenu()" type="button" class="c-close py-5 mt-2 d-block font-weight-lighter pl-4 pl-sm-0">
+          <span aria-hidden="true">&times;</span></a>
+        <div class="">
+          <ul class="navbar-nav text-uppercase pb-sm-5">
+            <li class="nav-item">
+              <a class="nav-link px-4 px-sm-5 c-bg1 c-active font-weight-bolder" href="#">Home <span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 px-sm-5" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 px-sm-5" href="#">Our Range</a>
+            </li>
+            <li class="nav-item c-dropdown" onclick="toggleDropdown('dropdown1')">
+              <a class="nav-link dropdown-toggle px-4 px-sm-5" href="#" id="navbarDropdownMenuLink" role="button">
+                About
+              </a>
+              <ul id="dropdown1" class="dropdown-menu p-0 rounded-0 my-0 c-bg4 w-75 mx-auto position-relative">
+                <li class="px-0">
+                  <a class="dropdown-item px-4 pt-1" href="#">About Us</a>
+                </li>
+                <li class="px-0 ">
+                  <a class="dropdown-item px-4 py-" href="#">Styles</a>
+                </li>
+                <li class="px-0 ">
+                  <a class="dropdown-item px-4 pt-1" href="#">events</a>
+                </li>
+                <li class="px-0">
+                  <a class="dropdown-item px-4 pt-1" href="#">features</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item c-dropdown" onclick="toggleDropdown('dropdown2')">
+              <a class="nav-link dropdown-toggle px-4 px-sm-5" href="#" id="navbarDropdownMenuLink" role="button">
+                News
+              </a>
+              <ul id="dropdown2" class="dropdown-menu p-0 rounded-0 c-bg4 w-75 mx-auto"
+                aria-labelledby="navbarDropdownMenuLink">
+                <li class="px-0">
+                  <a class="dropdown-item px-4 pt-1" href="#">Classic</a>
+                </li>
+                <li class="px-0">
+                  <a class="dropdown-item px-4 pt-1" href="#">organic</a>
+                </li>
+                <li class="px-0">
+                  <a class="dropdown-item px-4 pt-1" href="#">Portfolio</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 px-sm-5" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light d-sm-none c-mobile-navbar mb-0">
+      <a class="navbar-brand px-2 py-2" href="#">
+        <img src="./images/homepage/logo.png" class="w-25" alt="Luciano Logo">
+      </a>
+      <button onclick="displayMenu()" class="navbar-toggler c-toggler border-0 c-mobileham" type="button"
+        data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <div id="carouselExampleSlidesOnly" class="carousel w-100 c-carousel position-relative c-color4 text-center"
+      data-ride="carousel" data-interval="7000">
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active carousel-div1 h-100 position-relative">
+          <img src="./images/homepage/1.jpg" class="d-block w-100 h-100" alt="...">
+          <div class="carousel-caption d-block c-carousel-caption w-100 h-auto">
+            <p class="text-capitalize">We Produce</p>
+            <hr class="border border-white d-none d-sm-block" width="30">
+            <h5 class="font-weight-bolder text-capitalize mt-n3">The best olive oil!</h5>
+            <button class="btn c-carouselbtn c-bg1 rounded-0 text-uppercase mt-2 c-hover-bg1">Shop now!</button>
+          </div>
+        </div>
+        <div class="carousel-item carousel-div2 h-100 position-relative">
+          <img src="./images/homepage/background-2-1.jpg" class="d-block w-100 h-100" alt="...">
+          <div class="carousel-caption d-block c-carousel-caption w-100 h-auto">
+            <p class="text-capitalize">High quality olive oils and Balsamic vinegars</p>
+            <hr class="border border-white d-none d-sm-block" width="30">
+            <h5 class="font-weight-bolder text-capitalize mt-n3">olive oils and vinegars!</h5>
+            <button class="btn c-carouselbtn c-bg1 rounded-0 text-uppercase mt-2 c-hover-bg1">Shop now!</button>
+          </div>
+        </div>
+        <div class="carousel-item carousel-div3 h-100 position-relative">
+          <img src="./images/homepage/2.jpg" class="d-block w-100 h-100" alt="...">
+          <div class="carousel-caption d-block c-carousel-caption w-100 h-auto">
+            <p class="text-capitalize">Beatifully crafted</p>
+            <hr class="border border-white d-none d-sm-block" width="30">
+            <h5 class="font-weight-bolder text-capitalize mt-n3">Extra virgin olive oils!</h5>
+            <button class="btn c-carouselbtn c-bg1 rounded-0 text-uppercase mt-2 c-hover-bg1">Shop now!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="fixed-top bg-white c-color2 c-fixed-top px-5 pt-5  pt-sm-4 shadow-sm shadow">
+      <nav class="navbar navbar-light  position-relative">
+        <button onclick="displayMenu()" class="navbar-toggler border-0 mt-2" type="button" data-toggle="collapse"
+          data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon c-color2"></span>
+        </button>
+        <ul class="navbar-nav d-inline-block pt-2">
+          <li class="nav-item active d-inline-block">
+            <a class="nav-link d-block" type="button">
+              <svg width="2em" height="1.5em" viewBox="0 0 16 16" class="bi bi-cart" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+              </svg>
+              </i><span class="d-inline-block rounded-circle c-bg-circle3 c-bg1 text-center">0</span></a>
+          </li>
+          <li class="nav-item d-inline-block" onclick="openSearch()">
+            <a class="nav-link d-block" type="button">
+              <svg width="2em" height="1.5em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="d-flex c-row position-absolute w-100 px-4 py-3 c-lg-menu">
+      <div class="navbar navbar-dark bg-transparent c-hambtn-div d-sm-block">
+        <button onclick="displayMenu()" class="navbar-toggler c-hambtn" type="button" data-toggle="collapse"
+          data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div>
+        <a href="#" class="d-none d-sm-block c-lg-logo "><img src="./images/homepage/logo.png"
+            class="mx-auto d-sm-block" alt="" srcset="">
+        </a>
+      </div>
+      <div class="c-trolley pr-4">
+        <a class="d-inline-block" href="#">
+          <svg width="0.8em" height="1em" viewBox="0 0 16 16" class="bi bi-cart c-hover1" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+          </svg>
+          <span class="d-inline-block rounded-circle c-bg-circle3 c-bg1 text-center">0</span>
+        </a>
+        <a class="" href="#" onclick="openSearch()">
+          <svg width="0.8em" height="1em" viewBox="0 0 16 16" class="bi bi-search c-hover1" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+            <path fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="text-center position-relative">
+    <section class="c-bg1 py-5 px-3 px-sm-4 px-md-2 px-lg-5 mb-5 mb-md-3">
+      <div class="row mx-lg-5 px-lg-5">
+        <div class="col-md-3 c-div mb-5">
+          <div class="card bg-transparent border-0">
+            <a href="#" class="d-block px-5 py-2 mx-auto"><img class="c-icon card-img-top w-auto mx-auto" id="icon1"
+                src="./images/icon1.png" alt="" onmouseover="changeIcon('images/icon1 hover.png', 'icon1')"
+                onmouseout="changeIcon('images/icon1.png', 'icon1')">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title c-h"><a href="#" class="c-hover1">Gourmet Flavour</a></h5>
+              <hr class="border border-dark mb-3 mt-n1" width="30">
+              <p class="card-text">
+                We focus on providing our clients only the freshest products from around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div mb-5">
+          <div class="card bg-transparent border-0">
+            <a href="#" class="d-block px-5 py-2 mx-auto"><img class="c-icon card-img-top w-auto mx-auto" id="icon2"
+                src="./images/icon2.png" alt="" onmouseover="changeIcon('images/icon2 hover.png', 'icon2')"
+                onmouseout="changeIcon('images/icon2.png', 'icon2')">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title c-h"><a href="#" class="c-hover1">Special Oils</a></h5>
+              <hr class="border border-dark mb-3 mt-n1" width="30">
+              <p class="card-text">
+                The taste, the aroma and the natural ingredients of olive oils are kept unaltered.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div mb-5">
+          <div class="card bg-transparent border-0">
+            <a href="#" class="d-block px-5 py-2 mx-auto"><img class="c-icon card-img-top w-auto mx-auto" id="icon3"
+                src="./images/icon3.png" alt="" onmouseover="changeIcon('images/icon3 hover.png', 'icon3')"
+                onmouseout="changeIcon('images/icon3.png', 'icon3')">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title c-h"><a href="#" class="c-hover1">Health Benefits</a></h5>
+              <hr class="border border-dark mb-3 mt-n1" width="30">
+              <p class="card-text">
+                The health benefits of olive oil are unrivaled, and research reveals new every day.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div">
+          <div class="card bg-transparent border-0">
+            <a href="#" class="d-block px-5 py-2 mx-auto"><img class="c-icon card-img-top w-auto mx-auto" id="icon4"
+                src="./images/icon4.png" alt="" onmouseover="changeIcon('images/icon4 hover.png', 'icon4')"
+                onmouseout="changeIcon('images/icon4.png', 'icon4')">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title c-h"><a href="#" class="c-hover1">Extraordinary Taste</a></h5>
+              <hr class="border border-dark mb-3 mt-n1" width="30">
+              <p class="card-text">
+                We produce every day the extraordinary just-pressed organic olive oil.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid d-none d-lg-block rounded-circle bg-white p-3 mt-n5 c-olives">
+      <img src="./images/homepage/Depositphotos_5896747_original-63x46.png" alt="" srcset="" class="p-1 d-block">
+    </div>
+    <section class="py-3 px-3 px-sm-4 px-md-2 px-lg-5">
+      <div class="c-bg-header py-4 mb-5">
+        <h1 class="h1 font-weight-bolder">What We Do</h1>
+      </div>
+      <div class="row mx-lg-5 px-lg-5 px-md-4">
+        <div class="col-md-4 c-div mb-5">
+          <div class="card bg-transparent border-0 px-3">
+            <div class="cont position-relative">
+              <a href="#" class="d-block mx-auto">
+                <img src="./images/homepage/image-7-370x270.jpg" class="card-img-top w-100 mx-auto rounded-0" alt="">
+              </a>
+              <div class="middle position-absolute py-4">
+                <div class="container-fluid c-link-div c-link-div1 position-absolute rounded-circle">
+                  <a href="#">
+                    <img src="./images/icons8-link-100.png" alt="" class="mx-auto img-fluid" width="30">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3"><a href="#" class="c-hover1">Extra Virgin Olive Oil</a></h5>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text px-2 px-md-0 text-muted px-lg-4">
+                Olive oil is made simply by crushing olives and extracting the juice.
+                It is the only cooking oil that is made without the use of chemicals.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div mb-5">
+          <div class="card bg-transparent border-0 px-3">
+            <div class="cont position-relative">
+              <a href="#" class="d-block mx-auto">
+                <img src="./images/homepage/image-8-370x270.jpg" class="card-img-top w-100 mx-auto rounded-0" alt="">
+              </a>
+              <div class="middle position-absolute py-4">
+                <div class="container-fluid c-link-div c-link-div1 position-absolute rounded-circle">
+                  <a href="#">
+                    <img src="./images/icons8-link-100.png" alt="" class="mx-auto img-fluid" width="30">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3"><a href="#" class="c-hover1">Aged Balsamic Vinegar</a></h5>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text px-2 text-muted px-lg-4">
+                Balsamic vinegar is rich and has a complex flavour that balances
+                the sweet and sour elements of the cooked grape juice with hints of wood.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div mb-2">
+          <div class="card bg-transparent border-0 px-3">
+            <div class="cont position-relative">
+              <a href="#" class="d-block mx-auto">
+                <img src="./images/homepage/image-9-370x270.jpg" class="image card-img-top w-100 mx-auto rounded-0"
+                  alt="">
+              </a>
+              <div class="middle position-absolute py-4">
+                <div class="container-fluid c-link-div c-link-div1 position-absolute rounded-circle">
+                  <a href="#">
+                    <img src="./images/icons8-link-100.png" alt="" class="mx-auto img-fluid" width="30">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mt-3"><a href="#" class="c-hover1">Gourmet Salts</a></h5>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text px-2 text-muted px-lg-4">
+                Huge selection of gourmet salts for every flavor profile.
+                Our variety of culinary sea salts add an impressive finishing touch to any meal.
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="container-fluid d-none d-lg-block rounded-circle bg-white p-3 mt-n5 c-olives">
+      <img src="./images/homepage/Depositphotos_5896747_original-63x46.png" alt="" srcset="" class="p-1 d-block">
+    </div>
+    <section class="py-5 px-3 px-sm-4 px-md-2 px-lg-5 mb-3 mx-lg-5 d-none d-md-block">
+      <div class="c-bg-header py-4 mb-3">
+        <h1 class="h1 font-weight-bolder">Our Story</h1>
+      </div>
+      <div class="card border-0 px-md-4 mx-lg-5 px-lg-4 c-border-primary py-5">
+        <div class="row no-gutters c-border1 py-5">
+          <div class="col-md-4">
+            <img src="./images/homepage/background-2.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="h-100 position-relative">
+              <hr class="w-75 c-hr rounded-pill text-center position-absolute">
+              <ul class="nav c-ul-circles justify-content-center w-75 position-absolute">
+                <li class="nav-item p-3 d-block mx-lg-2 c-tooltip position-relative" data-toggle="tooltip"
+                  data-placement="top" onclick="showTooltip('tip1')">
+                  <a type="button"
+                    class="nav-link h4 c-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 c-bg-circle1">&#127778;</a>
+                  <a href="" class="text-secondary h4"><span class="d-block">1957</span></a>
+                  <span class="c-tooltiptext position-absolute c-active-tip rounded-lg c-bg2" id="tip1">
+                    <h4 class="c-bg1 py-3">The origins</h4>
+                    <p class="card-text text-muted p-3 font-weight-lighter">
+                      Choose from our superb range of quality oils, from extra virgin to infused oils!
+                      we focus on providing our clients good products
+                    </p>
+                  </span>
+                </li>
+                <li class="nav-item p-3 d-block mx-lg-2 c-tooltip position-relative" onclick="showTooltip('tip2')">
+                  <a type="button"
+                    class="nav-link h4 c-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 c-bg-circle1">&#127778;</a>
+                  <a href="" class="text-secondary h4"><span class="d-block">1962</span></a>
+                  <span class="c-tooltiptext position-absolute  rounded-lg c-bg2" id="tip2">
+                    <h4 class="c-bg1 py-3">Classic</h4>
+                    <p class="card-text text-muted p-3 font-weight-lighter">
+                      Choose from our superb range of quality oils, from extra virgin to infused oils!
+                      we focus on providing our clients good products
+                    </p>
+                  </span>
+                </li>
+                <li class="nav-item p-3 d-block mx-lg-2 c-tooltip position-relative" onclick="showTooltip('tip3')">
+                  <a type="button"
+                    class="nav-link h4 c-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 c-bg-circle1">&#127778;</a>
+                  <a href="" class="text-secondary h4"><span class="d-block">1974</span></a>
+                  <span class="c-tooltiptext position-absolute rounded-lg c-bg2" id="tip3">
+                    <h4 class="c-bg1 py-3">Organic</h4>
+                    <p class="card-text text-muted p-3 font-weight-lighter">
+                      Choose from our superb range of quality oils, from extra virgin to infused oils!
+                      we focus on providing our clients good products
+                    </p>
+                  </span>
+                </li>
+                <li class="nav-item p-3 d-block mx-lg-2 c-tooltip position-relative" onclick="showTooltip('tip4')">
+                  <a type="button"
+                    class="nav-link h4 c-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 c-bg-circle1">&#127778;</a>
+                  <a href="" class="text-secondary h4"><span class="d-block">2006</span></a>
+                  <span class="c-tooltiptext position-absolute rounded-lg c-bg2" id="tip4">
+                    <h4 class="c-bg1 py-3">High Quality</h4>
+                    <p class="card-text text-muted p-3 font-weight-lighter">
+                      Choose from our superb range of quality oils, from extra virgin to infused oils!
+                      we focus on providing our clients good products
+                    </p>
+                  </span>
+                </li>
+                <li class="nav-item p-3 d-block mx-lg-2 c-tooltip position-relative" onclick="showTooltip('tip5')">
+                  <a type="button"
+                    class="nav-link h4 c-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 c-bg-circle1">&#127778;</a>
+                  <a href="" class="text-secondary h4"><span class="d-block">2016</span></a>
+                  <span class="c-tooltiptext position-absolute rounded-lg c-bg2" id="tip5">
+                    <h4 class="c-bg1 py-3">Extra Virgin</h4>
+                    <p class="card-text text-muted p-3 font-weight-lighter">
+                      Choose from our superb range of quality oils, from extra virgin to infused oils!
+                      we focus on providing our clients good products
+                    </p>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid c-bg-image1 py-5 px-2 px-sm-4 px-md-2 px-lg-5 mt-3 mb-4 text-white text-center">
+      <div class="jumbotron bg-transparent py-5 px-0">
+        <div class="container py-5">
+          <h2 class="font-weight-bolder py-5 c-h1">The poetry of olives for heartfelt culinary inspiration</h2>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 px-1 px-sm-4 px-md-2 px-lg-5 mb-2 mb-md-3">
+      <div class="c-bg-header py-4 mb-5">
+        <h1 class="h1 font-weight-bolder">Our Range</h1>
+      </div>
+      <div class="row mx-lg-5 px-lg-5">
+        <div class="col-12 col-md-8 mx-auto">
+          <ul class="nav flex-column nav-tabs float-left border-0 position-absolute c-position1">
+            <li class="c-bg-square c-bg1 h3 c-hover-bg2 text-center d-block">
+              <a class="d-block" href="#carouselExampleControls" data-slide="prev"> &lt;</a>
+            </li>
+            <li class="c-bg-square c-bg1 h3 c-hover-bg2 text-center mt-n2 d-block">
+              <a class="d-block" href="#carouselExampleControls" data-slide="next">></a>
+            </li>
+          </ul>
+          <div id="carouselExampleControls" class="carousel slide d-inline-block col-11 float-right"
+            data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/homepage/slide_bg_1.jpg" alt="..." class="w-100 d-block">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/homepage/slide_bg_2.jpg" alt="..." class="w-100 d-block">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-11 col-md-4 mx-auto c-position2 position-relative align-middle  py-md-2 px-1 px-sm-5 px-md-0 py-5 c-bg1">
+          <div class="card c-bg1 border-0 rounded-0 align-middle">
+            <img class="mb-3 card-img-top w-25 d-block mx-auto" src="./images/homepage/icon-1.png" alt="" class="">
+            <div class="card-body">
+              <h5 class="text-capitalize card-title">
+                Choose from our superb range of quality oils, from extra virgin to infused oils!
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid text-left px-4 p-md-1 px-lg-5 c-fluid">
+      <div class="row text-left py-2 mx-lg-5 px-lg-5 justify-content-md-center">
+        <div class="col-md-4 c-div mb-md-2">
+          <div class="card border-0">
+            <div class="row no-gutters">
+              <div class="col-3">
+                <a href="#"><img class="w-100" id="icon5" src="./images/icon5.png" alt=""
+                    onmouseover="changeIcon('images/icon5 hover.png', 'icon5')"
+                    onmouseout="changeIcon('images/icon5.png', 'icon5')">
+                </a>
+              </div>
+              <div class="col-9">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="c-hover1">Extra Virgin</a></h5>
+                  <hr class="border border-dark ml-0 mt-n1" width="30">
+                  <p class="card-text text-muted">
+                    Olive oil comes from unadulterated oil production only, and is of higher quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div mb-md-n2">
+          <div class="card border-0">
+            <div class="row no-gutters">
+              <div class="col-3">
+                <a href="#"><img class="w-100" id="icon6" src="./images/icon6.png" alt=""
+                    onmouseover="changeIcon('images/icon6 hover.png', 'icon6')"
+                    onmouseout="changeIcon('images/icon6.png', 'icon6')">
+                </a>
+              </div>
+              <div class="col-9">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="c-hover1">New Harvest</a></h5>
+                  <hr class="border border-dark ml-0 mt-n1" width="30">
+                  <p class="card-text text-muted">
+                    Harvest oil is dedicated to providing you high quality ultra premium olive oils and vinegar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div mb-md-n2">
+          <div class="card border-0">
+            <div class="row no-gutters">
+              <div class="col-3">
+                <a href="#"><img class="w-100" id="icon7" src="./images/icon7.png" alt=""
+                    onmouseover="changeIcon('images/icon7 hover.png', 'icon7')"
+                    onmouseout="changeIcon('images/icon7.png', 'icon7')">
+                </a>
+              </div>
+              <div class="col-9">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="c-hover1">Original Taste</a></h5>
+                  <hr class="border border-dark ml-0 mt-n1" width="30">
+                  <p class="card-text text-muted">
+                    The taste, the aroma and the natural ingredients of olive oils are kept unaltered.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div mb-md-n2">
+          <div class="card border-0">
+            <div class="row no-gutters">
+              <div class="col-3">
+                <a href="#"><img class="w-100" id="icon8" src="./images/icon8.png" alt=""
+                    onmouseover="changeIcon('images/icon8 hover.png', 'icon8')"
+                    onmouseout="changeIcon('images/icon8.png', 'icon8')">
+                </a>
+              </div>
+              <div class="col-9">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="c-hover1">A Delicate Blend</a></h5>
+                  <hr class="border border-dark ml-0 mt-n1" width="30">
+                  <p class="card-text text-muted">
+                    A delicate blending operation is required to ensure our olive oil has a perfect balance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div mb-md-n2">
+          <div class="card border-0">
+            <div class="row no-gutters">
+              <div class="col-3">
+                <a href="#"><img class="w-100" id="icon9" src="./images/icon9.png" alt=""
+                    onmouseover="changeIcon('images/icon9 hover.png', 'icon9')"
+                    onmouseout="changeIcon('images/icon9.png', 'icon9')">
+                </a>
+              </div>
+              <div class="col-9">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="c-hover1">High Quality</a></h5>
+                  <hr class="border border-dark ml-0 mt-n1" width="30">
+                  <p class="card-text text-muted">
+                    A high quality extra virgin olive oil is perfect as a condiment for fish, meat and vegetables.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div mb-md-n2">
+          <div class="card border-0">
+            <div class="row no-gutters">
+              <div class="col-3">
+                <a href="#"><img class="w-100" id="icon10" src="./images/icon10.png" alt=""
+                    onmouseover="changeIcon('images/icon10 hover.png', 'icon10')"
+                    onmouseout="changeIcon('images/icon10.png', 'icon10')">
+                </a>
+              </div>
+              <div class="col-9">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#" class="c-hover1">Organic Only</a></h5>
+                  <hr class="border border-dark ml-0 mt-n1" width="30">
+                  <p class="card-text text-muted">
+                    We produce high quality organic olive oil because we use only eco-friendly products.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid d-none d-lg-block rounded-circle bg-white p-3 mt-4 c-olives">
+      <img src="./images/homepage/Depositphotos_5896747_original-63x46.png" alt="" srcset="" class="p-1 d-block">
+    </div>
+    <section class="py-5 px-2 px-sm-4 px-md-2 px-lg-5 my-5 mb-md-3">
+      <div class="c-bg-header py-4 mb-5">
+        <h1 class="h1 font-weight-bolder">New Products</h1>
+      </div>
+      <div class="row mx-lg-5 px-4 px-lg-5 mb-5">
+        <div class="col-md-3 c-div mb-3">
+          <div class="card p-2 mb-5 c-border3 rounded-0">
+            <div class="cont position-relative">
+              <a href="#"><img src="./images/homepage/product-7-300x300.jpg" alt="Flowers" class="card-img-top"></a>
+              <div class="container-fluid c-link-div c-link-div2 position-absolute">
+                <a href="#">
+                  <img src="./images/link icon black.png" alt="" class="mx-auto img-fluid" width="10">
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Blended Olive Oil</p>
+              <h4 class="card-title">&#x20A6;5000</h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <a href="#" class="btn btn-sm py-2 px-4 c-bg2 c-hover-bg1 rounded-0">ADD TO CHART</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div mb-3">
+          <div class="card p-2 mb-5 c-border3 rounded-0">
+            <div class="cont position-relative">
+              <a href="#"><img src="./images/homepage/product-5-300x300.jpg" alt="Flowers" class="card-img-top"></a>
+              <div class="container-fluid c-link-div c-link-div2 position-absolute">
+                <a href="#">
+                  <img src="./images/link icon black.png" alt="" class="mx-auto img-fluid" width="10">
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Crude Olive-Pomace Oil</p>
+              <h4 class="card-title">&#x20A6;2000</h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <a href="#" class="btn btn-sm py-2 px-4 c-bg2 c-hover-bg1 rounded-0">ADD TO CHART</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div mb-3">
+          <div class="card p-2 mb-5 c-border3 rounded-0">
+            <div class="cont position-relative">
+              <a href="#"><img src="./images/homepage/product-4-300x300.jpg" alt="Flowers" class="card-img-top"></a>
+              <div class="container-fluid c-link-div c-link-div2 position-absolute">
+                <a href="#">
+                  <img src="./images/link icon black.png" alt="" class="mx-auto img-fluid" width="10">
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Extra Virgin Olive Oil</p>
+              <h4 class="card-title">&#x20A6;3000</h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <a href="#" class="btn btn-sm py-2 px-4 c-bg2 c-hover-bg1 rounded-0">ADD TO CHART</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div mb-3">
+          <div class="card p-2 mb-5 c-border3 rounded-0">
+            <div class="cont position-relative">
+              <a href="#"><img src="./images/homepage/product-6-300x300.jpg" alt="Flowers" class="card-img-top"></a>
+              <div class="container-fluid c-link-div c-link-div2 position-absolute">
+                <a href="#">
+                  <img src="./images/link icon black.png" alt="" class="mx-auto img-fluid" width="10">
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Unfiltered Olive Oil</p>
+              <h4 class="card-title">&#x20A6;3000</h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <a href="#" class="btn btn-sm py-2 px-4 c-bg2 c-hover-bg1 rounded-0">ADD TO CHART</a>
+            </div>
+          </div>
+        </div>
+        <button class="btn mt-4 c-bg-primary py-2 px-4 mx-auto c-card-btn c-bg1 c-hover-bg1 rounded-0">VIEW
+          ALL</button>
+    </section>
+    <section
+      class="text-left py-5 px-3 px-sm-4 px-md-2 px-lg-5 mb-2 mb-md-3 c-color4 c-bg-image2 c-benefits position-relative">
+      <h1 class="text-center mb-5 h1 font-weight-bolder">Health Benefits</h1>
+      <div class="col-4 mx-auto my-5 px-2 c-img">
+        <img src="./images/homepage/image-30.jpg" alt="" srcset="" class="w-100 rounded-circle">
+      </div>
+      <ol class="mx-lg-5 px-lg-5 row list-unstyled justify-content-between c-ol">
+        <li class="c-div mb-4">
+          <div class="container">
+            <a href="#" class="c-color3 c-hover1">
+              <h5 class="d-inline-block mb-3">Prevents Heart Attacks</h5>
+            </a>
+            <hr class="border mr-0 mt-n1 d-none" width="30">
+            <p class="float-right">
+              Olive oil is one of the healthiest types of fat around, so you should choose fats wisely.
+            </p>
+          </div>
+        </li>
+        <li class="c-div mb-4">
+          <div class="container">
+            <a href="#" class="c-color3 c-hover1">
+              <h5 class="d-inline-block mb-3">Reduces Cholesterol Levels</h5>
+            </a>
+            <hr class="border ml-0 mt-n1 d-none" width="30">
+            <p>
+              The health benefits of olive oil include lower cholesterol levels in the your blood.
+            </p>
+          </div>
+        </li>
+        <li class="c-div mb-4">
+          <div class="container">
+            <a href="#" class="c-color3 c-hover1">
+              <h5 class="d-inline-block mb-3">Improves Your Memory</h5>
+            </a>
+            <hr class="border mr-0 mt-n1 d-none " width="30">
+            <p class="float-right">
+              Olive oils’ antioxidants have been shown reverse of disease-related memory deficits.
+            </p>
+          </div>
+        </li>
+        <li class="c-div mb-4">
+          <div class="container">
+            <a href="#" class="c-color3 c-hover1">
+              <h5 class="d-inline-block mb-3">Helps Digestion</h5>
+            </a>
+            <hr class="border ml-0 mt-n1 d-none" width="30">
+            <p>
+              Although high in calories, olive oil has shown to help reduce levels of obesity.
+            </p>
+          </div>
+        </li>
+        <li class="c-div mb-4">
+          <div class="container">
+            <a href="#" class="c-color3 c-hover1">
+              <h5 class="d-inline-block mb-3">Helps Fight Cancer</h5>
+            </a>
+            <hr class="border mr-0 mt-n1 d-none " width="30">
+            <p class="float-right">
+              The elements in olive oil can decrease the risk of breast cancer and its recurrence.
+            </p>
+          </div>
+        </li>
+        <li class="c-div mb-4">
+          <div class="container">
+            <a href="#" class="c-color3 c-hover1">
+              <h5 class="d-inline-block mb-3">Prevents Blood Clotting</h5>
+            </a>
+            <hr class="border ml-0 mt-n1 d-none" width="30">
+            <p>
+              Olive oil can reduce the risk of heart attacks and stroke, also improve blood clotting.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section class="text-center py-5 px-4 p-md-1 px-lg-5 mt-1 mt-md-5 mb-5">
+      <div class="c-bg-header py-4 mt-3 mb-4">
+        <h1 class="h1 font-weight-bolder">Our Team</h1>
+      </div>
+      <div class="row mt-4 mx-1  px-1 mx-lg-5 px-lg-5">
+        <div class="col-md-3 c-div">
+          <div class="card border-0 py-2 px-lg-4">
+            <img src="./images/homepage/new_team_2-360x360.jpg" alt="" srcset=""
+              class="w-75 rounded-circle card-img-top mx-auto">
+            <div class="card-body">
+              <h4 class="card-title mt-3"><a class="card-link c-hover1" href="#">Nathan Smith</a></h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text text-muted">A grower</p>
+            </div>
+            <div class="card-body mt-n4">
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-twitter"></i></a>
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div">
+          <div class="card border-0 py-2 px-lg-4">
+            <img src="./images/homepage/new_team_3-360x360.jpg" alt="" srcset=""
+              class="w-75 rounded-circle card-img-top mx-auto">
+            <div class="card-body">
+              <h4 class="card-title mt-3"><a class="card-link c-hover1" href="#">Laura Palmer</a></h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text text-muted">A grower</p>
+            </div>
+            <div class="card-body mt-n4">
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-twitter"></i></a>
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div">
+          <div class="card border-0 py-2 px-lg-4">
+            <img src="./images/homepage/new_team_4-360x360.jpg" alt="" srcset=""
+              class="w-75 rounded-circle card-img-top mx-auto">
+            <div class="card-body">
+              <h4 class="card-title mt-3"><a class="card-link c-hover1" href="#">Joe Carter</a></h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text text-muted">A grower</p>
+            </div>
+            <div class="card-body mt-n4">
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-twitter"></i></a>
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div">
+          <div class="card border-0 py-2 px-lg-4">
+            <img src="./images/homepage/new_team_1-360x360.jpg" alt="" srcset=""
+              class="w-75 rounded-circle card-img-top mx-auto">
+            <div class="card-body">
+              <h4 class="card-title mt-3"><a class="card-link c-hover1" href="#">Melissa Cox</a></h4>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text text-muted">A grower</p>
+            </div>
+            <div class="card-body mt-n4">
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-twitter"></i></a>
+              <a href="#" class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1"><i
+                  class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div">
+        </div>
+    </section>
+    <div class="text-center position-relative d-none d-lg-block my-3">
+      <img src="./images/homepage/Depositphotos_5896747_original-63x46.png" alt="" srcset="">
+    </div>
+    <section class="text-center py-5 px-2 p-md-1 px-lg-5 mt-5 mb-2">
+      <div class="c-bg-header py-4 p-md-4 mt-3 mb-5">
+        <h1 class="h1 font-weight-bolder">Tasting Experience</h1>
+      </div>
+      <div class="card border-0 mt-4 mx-1  mx-lg-5 px-lg-5">
+        <div class="col-sm-8 px-0 cont position-relative mx-auto c-taste">
+          <a href="#" class="d-block mx-auto">
+            <img src="./images/homepage/image-13.jpg" class="card-img-top w-100 rounded-0" alt="">
+          </a>
+          <div class="middle position-absolute py-4">
+            <div class="container-fluid c-link-div c-link-div1 c-p1 position-absolute rounded-circle">
+              <a href="#" class="h3 c-color4 c-hover2">&#9658;
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body col-lg-8 mx-auto mb-5">
+          <h3 class="card-title h4 font-weight-bolder my-3">Passion For Quality</h3>
+          <hr class="border border-dark mt-n1" width="30">
+          <p class="card-text mx-auto w-75 text-muted p-sm-5">
+            We love what we do and how we do! We put our care, quality and passion into
+            creating our extra virgin olive oil. Our passion pushes us to continually craft the
+            freshest extra virgin olive oil.
+          </p>
+          <a href="#" class="btn pt-3 pb-2 px-4 mt-3 pt-md-4 pb-md-3 c-bg1 c-hover-bg1 rounded-0" type="button">VIEW
+            EVENT
+            CALENDAR</a>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid c-bg-image4 py-5 px-2 px-sm-4 px-md-2 px-lg-5 mt-3 mb-4 c-color4 text-center">
+      <div class="jumbotron bg-transparent py-5 px-0">
+        <div class="container py-5">
+          <h2 class="font-weight-bolder py-5 c-h1">Enjoy Our Lavish Olive Oils And Balsamic Vinegars!</h2>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5 px-0 pb-0 px-md-1 px-lg-5 mt-3 c-bg-image3-2">
+      <div class="c-bg-header p-4 my-2">
+        <h1 class="h1 font-weight-bolder">The Blog</h1>
+      </div>
+      <div class="row mt-5 mx-lg-5 px-lg-5 c-bg-image3-1">
+        <div class="col-md-4 c-div px-5">
+          <div class="card border-0 bg-transparent">
+            <div class="cont position-relative">
+              <a href="#" class="d-block mx-auto">
+                <img src="./images/homepage/image-3-370x270.jpg" class="image card-img-top w-100 mx-auto rounded-0"
+                  alt="">
+              </a>
+              <div class="middle position-absolute py-4">
+                <div class="container-fluid c-link-div c-link-div1 position-absolute rounded-circle">
+                  <a href="#">
+                    <img src="./images/icons8-link-100.png" alt="" class="mx-auto img-fluid" width="30">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="#" class="c-color3">June 10, 2016</a>
+              <h5 class="card-title my-3">
+                <a href="#" class="c-hover1">Treating The Olive Trees Like Grapevines</a>
+              </h5>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text">
+                Choose from our superb range of quality oils, from extra virgin to infused oils!
+                we focus on providing our clients only the freshest products from around the world
+              </p>
+              <button class="btn mt-3 c-bg1 rounded-0 px-4 py-2 c-hover-bg1" type="button">READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div px-5">
+          <div class="card border-0 bg-transparent">
+            <div class="cont position-relative">
+              <a href="#" class="d-block mx-auto">
+                <img src="./images/homepage/image-2-370x270.jpg" class="image card-img-top w-100 mx-auto rounded-0"
+                  alt="">
+              </a>
+              <div class="middle position-absolute py-4">
+                <div class="container-fluid c-link-div c-link-div1 position-absolute rounded-circle">
+                  <a href="#">
+                    <img src="./images/icons8-link-100.png" alt="" class="mx-auto img-fluid" width="30">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="#" class="c-color3">June 10, 2016</a>
+              <h5 class="card-title my-3">
+                <a href="#" class="c-hover1">Gentle Manual Harvesting And Processing</a>
+              </h5>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text">
+                Choose from our superb range of quality oils, from extra virgin to infused oils!
+                we focus on providing our clients only the freshest products from around the world
+              </p>
+              <button class="btn mt-3 c-bg1 rounded-0 px-4 py-2 c-hover-bg1" type="button">READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 c-div px-5 c-bg-image3">
+          <div class="card border-0 bg-transparent">
+            <div class="cont position-relative">
+              <a href="#" class="d-block mx-auto">
+                <img src="./images/homepage/post-3.jpg" class="image card-img-top w-100 mx-auto rounded-0" alt="">
+              </a>
+              <div class="middle position-absolute py-4">
+                <div class="container-fluid c-link-div c-link-div1 position-absolute rounded-circle">
+                  <a href="#">
+                    <img src="./images/icons8-link-100.png" alt="" class="mx-auto img-fluid" width="30">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <a href="#" class="c-color3">June 10, 2016</a>
+              <h5 class="card-title my-3">
+                <a href="#" class="c-hover1">Integration Of The Oil Mills In The Finca</a>
+              </h5>
+              <hr class="border border-dark mt-n1" width="30">
+              <p class="card-text">
+                Choose from our superb range of quality oils, from extra virgin to infused oils!
+                we focus on providing our clients only the freshest products from around the world
+              </p>
+              <button class="btn mt-3 c-bg1 rounded-0 px-4 py-2 c-hover-bg1" type="button">READ MORE</button>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="c-awards py-5 px-3 px-sm-4 px-md-2 px-lg-5 c-color4 w-100">
+      <div class="c-bg-header p-4 mt-3 mb-5">
+        <h1 class="h1 font-weight-bolder">Awards</h1>
+      </div>
+      <!-- Top content -->
+      <div class="top-content py-3 c-patcarousel mx-lg-5 px-lg-4">
+        <div class="container-fluid">
+          <div id="partners-carousel" class="carousel" data-ride="carousel">
+            <div class="carousel-inner c-carousel-inner row w-100 mx-auto" role="listbox">
+              <div class="carousel-item c-carousel-item col-md-2 col-lg-2 active">
+                <img src="./images/homepage/client-6.png" class="img-fluid mx-auto d-block" alt="img1">
+              </div>
+              <div class="carousel-item c-carousel-item col-md-2 col-lg-2">
+                <img src="./images/homepage/client-5.png" class="img-fluid mx-auto d-block" alt="img2">
+              </div>
+              <div class="carousel-item c-carousel-item col-md-2 col-lg-2">
+                <img src="./images/homepage/client-4.png" class="img-fluid mx-auto d-block" alt="img3">
+              </div>
+              <div class="carousel-item c-carousel-item col-md-2 col-lg-2">
+                <img src="./images/homepage/client-3.png" class="img-fluid mx-auto d-block" alt="img4">
+              </div>
+              <div class="carousel-item c-carousel-item col-md-2 col-lg-2">
+                <img src="./images/homepage/client-1.png" class="img-fluid mx-auto d-block" alt="img5">
+              </div>
+              <div class="carousel-item c-carousel-item col-md-2 col-lg-2">
+                <img src="./images/homepage/client-2.png" class="img-fluid mx-auto d-block" alt="img6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="py-3 px-2 px-sm-4 px-md-2 px-lg-5 c-color5">
+      <div class="row mx-lg-5 px-lg-5 py-5">
+        <div class="col-md-3 c-div mb-5">
+          <div class="card border-0 bg-transparent">
+            <div class="card-body">
+              <h5 class="card-title c-color1">About Us</h5>
+              <hr class="border border-secondary mt-n1 ml-0" width="30">
+              <p class="card-text">
+                We love what we do and how we do! We put our care, quality and passion into creating our extra virgin
+                olive oil. Our passion pushes us to continually craft the freshest extra virgin olive oil.<br><br>
+                We use traditional methods to produce oil so when you buy olive oil from us, you buy quality guarantee.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div mb-5">
+          <div class="card border-0 bg-transparent">
+            <div class="card-body">
+              <h5 class="card-title c-color1">Information</h5>
+              <hr class="border border-secondary mt-n1 ml-0" width="30">
+              <div class="row">
+                <div class="col-6">
+                  <a href="#" class="c-color5 c-hover1">Home</a><br>
+                  <a href="#" class="c-color5 c-hover1">Shop</a><br>
+                  <a href="#" class="c-color5 c-hover1">Our Range</a><br>
+                  <a href="#" class="c-color5 c-hover1">About Us</a><br>
+                  <a href="#" class="c-color5 c-hover1">News</a><br>
+                  <a href="#" class="c-color5 c-hover1">Contact</a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="c-color5 c-hover1">Ordering Services</a><br>
+                  <a href="#" class="c-color5 c-hover1">Shipping & Delivery</a><br>
+                  <a href="#" class="c-color5 c-hover1">Returns</a><br>
+                  <a href="#" class="c-color5 c-hover1">FAQ</a><br>
+                  <a href="#" class="c-color5 c-hover1">Wholesale</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div mb-5">
+          <div class="card border-0 bg-transparent">
+            <div class="card-body">
+              <h5 class="card-title c-color1">Newsletter</h5>
+              <hr class="border border-secondary mt-n1 ml-0" width="30">
+              <p class="card-text">
+                Stay up to date with all our recent products and promotions
+              </p>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control w-75 px-4 py-4 bg-transparent rounded-0 c-border2"
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label c-label position-relative pl-3" for="exampleCheck1">
+                    <input type="checkbox" class="form-check-input d-none" id="exampleCheck1">
+                    <span class="c-checkmark position-absolute c-bg2"></span>
+                    <small>I have read and agree to the <a href="#" class="c-color5 c-hover1">terms &
+                        conditions</a></small></label>
+                </div>
+                <button type="submit" class="btn c-bg1 c-hover-bg1 rounded-0 px-5">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 c-div">
+          <div class="card border-0 bg-transparent">
+            <div class="card-body">
+              <h5 class="card-title c-color1">Contact Us</h5>
+              <hr class="border border-secondary mt-n1 ml-0" width="30">
+              <address>
+                888 Broadway
+                New York, NY, 18813 <br><br>
+
+                Phone: 123-456-7890 <br>
+                Fax: 123-456-7890 <br>
+                Email: info@yoursite.com
+              </address>
+              <div class="card-body justify-content-start px-0">
+                <a href="#"
+                  class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 mx-0 mx-lg-1"><i
+                    class="fab fa-twitter"></i></a>
+                <a href="#"
+                  class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 mx-0 mx-lg-1"><i
+                    class="fab fa-facebook-f"></i></a>
+                <a href="#"
+                  class="card-link c-hover-bg1 d-inline-block rounded-circle c-bg-circle c-bg1 mx-0 mx-lg-1"><i
+                    class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pb-5 px-3 px-sm-4 px-md-2 px-lg-5 c-color4">
+      <div class="text-white mx-lg-5 px-lg-5 pb-5">
+        <p class="px-3 px-lg-4 mx-lg-3">
+          Design credit: <a href="#" class="c-color1 c-hover1">AncoraThemes</a> © 2020. All rights reserved.</p>
+      </div>
+    </section>
+    <section class="mx-5">
+  </footer>
+
+
+
+
+
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/all.min.js"></script>
+  <script src="./js/myscript.js"></script>
+</body>
+
+</html>
